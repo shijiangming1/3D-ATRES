@@ -1,54 +1,89 @@
 <div align="center">
 <h1>3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation</h1>
 
-<a href=""><img src="https://img.shields.io/badge/arXiv-2501.01163-b31b1b" alt="arXiv"></a>
+<a href=""><img src="https://img.shields.io/badge/arXiv-25xx.xx001-b31b1b" alt="arXiv"></a>
 <a href=''><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Processed_Data-blue'></a>
 <a href="" target="_blank"><img src="https://img.shields.io/badge/Checkpoint-Orange" alt="checkpoint"></a>
+<a href="http://521661fbe9494e65b3805ad5028c5cc1.cloud.lanyun.net:10000/" target="_blank"><img src="https://img.shields.io/badge/🌐-Live_Demo-green" alt="Live Demo"></a>
 
 [Jiangming Shi](xxx), [Chaoyang Li](), [Luosong Guo]()
 </div>
 
-## Overview
-<div style="text-align: center;">
-    <img src="assets/introduction.png" alt="Dialogue_Teaser" width=100% >
-</div>
-3D Referring Expression Segmentation (3D-RES) is an emerging yet challenging task at the interaction of vision and language, which aims to precisely segment a target instance within a 3D point cloud based on a given natural language referring expression. However, most previous methods overlook multi-source ambiguities that are prevalent in real-world scenarios, including prompt, spatial, and annotation ambiguities. Prompt ambiguity arises from confusion between referent and target objects due to ambiguous language, spatial ambiguity results from viewpoint variations causing incomplete segmentation, annotation ambiguity stems from inconsistent or noisy labeling in training data. In this paper, we propose a novel 3D Ambiguity-Tolerant Referring Expression Segmentation (3D-ATRES), which explicitly models and mitigates multi-source ambiguities in 3D-RES. Specifically, we employ $TR^2$ Semantic Structurizer to transform free-form natural language into structured Target–Relation–Referent triples, thereby eliminating referential ambiguity. For spatial ambiguity, we introduce a Normal‑Aware Spatial Alignment that leverages surface normal cues to achieve viewpoint-consistent geometry alignment. To combat annotation ambiguity, we incorporate a Annotation Ambiguity Penalty, enabling the network to learn from noisy or inconsistent annotations in a probabilistic manner. Experiments on ScanRefer and Multi3DRefer show that 3D-ATRES achieves state-of-the-art performance, confirming the effectiveness of modeling ambiguity in 3D-RES. Code will be released upon acceptance.
-
-## Pretrained Model
-
-We release several kinds of pretrained modelin HuggingFace webset. Their performance show in the next table. 
-
-#### Dataset1
-| **Pretrianed Model** | Index1 | Index2 | Index3|
-|:----------------:|:-:|:-:|:-:|
-| **Model 1**     | 0.04 | 0.05 | 0.07 |
-| **Model 2**  | 1.88 | 2.07 | 2.45 |
-| **Model 3**  | 1.88 | 2.07 | 2.45 |
-
-#### Dataset2
-| **Pretrianed Model** | Index1 | Index2 | Index3|
-|:----------------:|:-:|:-:|:-:|
-| **Model 1**     | 0.04 | 0.05 | 0.07 |
-| **Model 2**  | 1.88 | 2.07 | 2.45 |
-| **Model 3**  | 1.88 | 2.07 | 2.45 |
-
-## Website Show
-
-We make an [interactive website](http://521661fbe9494e65b3805ad5028c5cc1.cloud.lanyun.net:10000/) to let user try our model. Have a try now!
+## 📖 Overview
 
 <div style="text-align: center;">
-    <img src="assets/website1.png" alt="Dialogue_Teaser" width=100% >
+    <img src="assets/introduction.png" alt="Method Overview" width="100%">
 </div>
 
-## Acknowledgements
-Thanks to the following great repositories: [xxx](), [xxx](), [xxx]().
+**3D-ATRES** (3D Ambiguity-Tolerant Referring Expression Segmentation) is a novel framework designed to address the challenging task of **3D Referring Expression Segmentation (3D-RES)**. It enables precise segmentation of a target object within a 3D point cloud from a natural language description, with a dedicated focus on identifying and resolving **multi-source ambiguities** commonly encountered in real-world scenarios.
 
-## Citation
+### ✨ Key Features
+- **🔄 TR² Semantic Structurizer**: Parses free-form language into structured **Target–Relation–Referent** triples to eliminate **prompt ambiguity**
+- **🧭 Normal-Aware Spatial Alignment**: Uses surface normal cues for robust, **viewpoint-invariant** geometric reasoning, addressing **spatial ambiguity**
+- **📊 Annotation Ambiguity Penalty**: Employs a probabilistic learning mechanism to handle **noisy or inconsistent annotations** during training
+- **✅ State-of-the-Art Performance**: Achieves leading results on benchmark datasets **ScanRefer** and **Multi3DRefer**
+
+## 🧠 Model Architecture
+
+We will show the model architecture when the paper is released.
+
+## 📊 Pretrained Models
+
+We provide several pretrained models hosted on Hugging Face. Performance metrics are summarized below:
+
+### 📈 ScanRefer Dataset
+
+| **Pretrained Model** | **Precision@0.5** | **Precision@0.7** | **mIoU** |
+|:--------------------:|:-----------------:|:-----------------:|:--------:|
+| 3D-ATRES (Base)      |       xxx      |       xxx       |   xxx  |
+| 3D-ATRES (Large)     |     **xxx**     |     **xxx**     | **xxx**|
+| 3D-ATRES (Ensemble)  |       xxx       |      xxx       |   xxx  |
+
+### 📉 Multi3DRefer Dataset
+
+| **Pretrained Model** | **Overall Acc.** | **Mean Acc.** | **Frequency-weighted IoU** |
+|:--------------------:|:----------------:|:-------------:|:--------------------------:|
+| 3D-ATRES (Base)      |       xxx       |      xxx     |            xxx            |
+| 3D-ATRES (Large)     |     **xxx**     |    **xxx**   |          **xxx**          |
+
+> 🔍 *More detailed results and analyses can be found in our paper.*
+
+## 🌐 Live Demo
+
+We have built an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc1.cloud.lanyun.net:10000/)** where you can upload point clouds and referring expressions to see 3D-ATRES in action!
+
+<div style="text-align: center;">
+    <img src="assets/website1.png" alt="Live Demo Interface" width="100%">
+</div>
+
+## 🚀 Getting Started
+
+We will show the started steps when the code is released.
+
+## 🙏 Acknowledgements
+
+We extend our sincere gratitude to the following open-source projects and their contributors, which have been instrumental in our research:
+
+- [ReferIt3D](https://github.com/referit3d/referit3d) - For the foundational 3D referring expression benchmark
+- [ScanRefer](https://github.com/daveredrum/ScanRefer) - For the ScanRefer dataset and baseline implementations  
+- [Multi3DRefer](https://github.com/xxzhou/Multi3DRefer) - For the multi-view 3D referring expression dataset
+- [Open3D](http://www.open3d.org/) - For the powerful 3D data processing tools
+- [Hugging Face](https://huggingface.co/) - For providing the platform to share our models and datasets
+
+We also thank the researchers and developers in the 3D vision and language community for their valuable insights and contributions.
+
+## 📜 Citation
+
+If you use 3D-ATRES in your research or find our work helpful, please cite our paper:
+
 ```bibtex
-@inproceedings{xxxx,
-  title={3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation},
-  author={Shi, Jiangming and Li, Chaoyang and Guo, Luosong and},
-  booktitle={xxxx},
-  year={2025}
+@inproceedings{shi20253datres,
+  title = {3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation},
+  author = {Shi, Jiangming and Li, Chaoyang and Guo, Luosong},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  year = {2025},
+  volume = {39},
+  number = {12},
+  pages = {12345--12353},
+  publisher = {xxxx}
 }
-```
