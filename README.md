@@ -21,6 +21,11 @@
 
 **3D-ATRES** (3D Ambiguity-Tolerant Referring Expression Segmentation) is a novel framework designed to address the challenging task of **3D Referring Expression Segmentation (3D-RES)**. It enables precise segmentation of a target object within a 3D point cloud from a natural language description, with a dedicated focus on identifying and resolving **multi-source ambiguities** commonly encountered in real-world scenarios.
 
+##🚀  Release Plan
+- [x] Release the visual interaction tools code.
+- [ ] Release the training code.
+
+
 ### ✨ Key Features
 - **🔄 TR² Semantic Structurizer**: Parses free-form language into structured **Target–Relation–Referent** triples to eliminate **prompt ambiguity**
 - **🧭 Normal-Aware Spatial Alignment**: Uses surface normal cues for robust, **viewpoint-invariant** geometric reasoning, addressing **spatial ambiguity**
@@ -54,7 +59,7 @@ We provide several pretrained models hosted on Hugging Face. Performance metrics
 
 ## 🌐 Live Demo
 
-We have built an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc1.cloud.lanyun.net:10000/)** where you can upload point clouds and referring expressions to see 3D-ATRES in action!
+We have built an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc1.cloud.lanyun.net:10000/)** where you can upload point clouds and referring expressions to see 3D-ATRES in action! In addition, we have open-source the code for all visual interaction tools. You can find all the relevant code in the **web2.4_EN/**
 
 #### Example1
 ![example1](./assets/example1.gif)
