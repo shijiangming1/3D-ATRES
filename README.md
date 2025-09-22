@@ -9,7 +9,9 @@
 [Jiangming Shi](xxx), [Chaoyang Li](), [Luosong Guo]()
 </div>
 
-![demo_show](./assets/demo.gif)
+<div align="center">
+  <img src="./assets/demo.gif" alt="Demo GIF" width="400">
+</div>
 
 ## 📖 Overview
 
