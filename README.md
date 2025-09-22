@@ -10,7 +10,7 @@
 </div>
 
 <div align="center">
-  <img src="./assets/demo.gif" alt="Demo GIF" width="400">
+  <img src="./assets/demo.gif" alt="Demo GIF" width="800">
 </div>
 
 ## 📖 Overview
