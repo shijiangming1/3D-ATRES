@@ -1,0 +1,342 @@
+/* --- 全局样式 & 变量 --- */
+:root {
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --background-color: #f4f7f9;
+    --container-bg-color: #ffffff;
+    --text-color: #333;
+    --border-color: #dee2e6;
+    --header-height: 60px;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100%;
+    overflow: hidden;
+}
+
+/* --- 主布局 --- */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.main-header {
+    height: var(--header-height);
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+.main-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.content-wrapper {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100vh - var(--header-height));
+    padding: 15px;
+    gap: 15px;
+}
+
+/* --- 3D 视图和聊天容器 --- */
+.viewer-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+.chat-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+/* --- 3D 视图控件 --- */
+.viewer-controls {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+.viewer-widget {
+    flex-grow: 1;
+    position: relative;
+}
+.viewer-widget canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+.loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.loader-spinner {
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loader-text {
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+/* --- 通用按钮和输入框 --- */
+.btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 14px;
+}
+.btn:hover {
+    background-color: #e9ecef;
+}
+.btn-navigate {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+.btn-navigate:hover {
+    background-color: #218838;
+}
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* --- 聊天界面 --- */
+.chat-header {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.chat-box {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.chat-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid var(--border-color);
+    gap: 10px;
+}
+.chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+}
+.mode-select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+}
+
+/* --- 聊天消息样式 (全新设计) --- */
+.message-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 85%;
+}
+.message-wrapper.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+.message-wrapper.system {
+    align-self: flex-start;
+}
+
+.message-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0;
+}
+.message-wrapper.user .message-avatar {
+    background-color: var(--primary-color);
+}
+.message-wrapper.system .message-avatar {
+    background-color: #6c757d;
+}
+
+.message-content {
+    padding: 12px 16px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.message-wrapper.user .message-content {
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom-right-radius: 2px;
+}
+.message-wrapper.system .message-content {
+    background-color: #e9ecef;
+    color: var(--text-color);
+    border-bottom-left-radius: 2px;
+}
+
+/* 嵌入式内容样式 */
+.message-wrapper .inline-viewer-container {
+    width: 100%;
+    height: 280px;
+    margin-top: 10px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+}
+.message-wrapper .inline-viewer-container canvas {
+    display: block;
+}
+.message-wrapper.system p.video-info {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #6c757d;
+}
+
+/* --- 模态框 --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 600px;
+}
+.video-modal-content {
+    max-width: 800px;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.modal-close-btn {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal-body {
+    margin-bottom: 15px;
+}
+.modal-footer {
+    text-align: right;
+}
+
+
+/* ==========================================================================
+   移动端响应式适配 (Mobile Responsive Styles)
+   当屏幕宽度小于等于 768px 时生效
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* 1. 调整主布局，从左右变为上下 */
+    .content-wrapper {
+        flex-direction: column; /* 这是最关键的改动 */
+        padding: 10px;          /* 减小页面边距 */
+        gap: 10px;              /* 减小容器间距 */
+        height: calc(100vh - var(--header-height)); /* 确保高度正确 */
+    }
+
+    /* 2. 重设 3D 视图和聊天容器的尺寸 */
+    .viewer-container {
+        flex: 1; /* 让它占据可用的垂直空间，可以根据需要调整比例 */
+        min-height: 300px; /* 给一个最小高度，防止被过度压缩 */
+    }
+
+    .chat-container {
+        flex: 1; /* 与视图容器平分高度，或者你可以设为 flex: 0.8 来让它小一点 */
+        min-height: 300px;
+    }
+
+    /* 3. 优化头部和字体 */
+    .main-header h1 {
+        font-size: 1.2rem; /* 缩小标题字体 */
+    }
+
+    /* 4. 优化聊天气泡的最大宽度，使其在窄屏下更美观 */
+    .message-wrapper {
+        max-width: 95%; /* 允许消息气泡使用更多宽度 */
+    }
+
+    /* 5. 调整嵌入式3D视图的高度 */
+    .message-wrapper .inline-viewer-container {
+        height: 220px; /* 适当减小聊天框内嵌视图的高度 */
+    }
+
+    /* 6. (可选) 优化按钮和输入框的触摸体验 */
+    .btn, .chat-input, .mode-select {
+        padding: 12px; /* 增大触摸区域 */
+    }
+
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <header class="main-header">
+            <h1>Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation</h1>
+        </header>
+        <main class="content-wrapper">
+            <div class="viewer-container">
+                <div class="viewer-controls">
+                    <input type="file" id="file-input" accept=".ply" style="display: none;">
+                    <button id="select-file-btn" class="btn">Select Point Cloud File</button>
+                    <select id="demo-select" class="btn">
+                        <option value="" disabled selected>Select Demo Point Cloud</option>
+                        <option value="scene0645_02.ply">Demo Point Cloud 1</option>
+                        <option value="scene0616_00.ply">Demo Point Cloud 2</option>
+                        <option value="scene0207_00.ply">Demo Point Cloud 3</option>
+                        <option value="scene0231_01.ply">Demo Point Cloud 4</option>
+                        <option value="scene0307_00.ply">Demo Point Cloud 5</option>
+<!--                        <option value="scene0000_00_vh_clean.ply">Demo Point Cloud 5</option>-->
+                    </select>
+                    <button id="clear-scene-btn" class="btn">Reset View</button>
+                    <button id="navigate-btn" class="btn btn-navigate" disabled>Navigate</button>
+                </div>
+                <div id="viewer" class="viewer-widget">
+                    <div id="loader-overlay" class="loader-overlay" style="display: none;">
+                        <div class="loader-spinner"></div>
+                        <p id="loader-text">Loading...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-container">
+                <div class="chat-header">Intelligent Interaction</div>
+                <div id="chat-box" class="chat-box"></div>
+                <div class="chat-input-area">
+                    <select id="mode-select" class="mode-select">
+                        <option value="locate">Localization Mode</option>
+                        <option value="chat">Chat Mode</option>
+                    </select>
+                    <input type="text" id="chat-input" class="chat-input" placeholder="Enter message...">
+                    <button id="send-btn" class="btn">Send</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Navigation Video Modal -->
+    <div id="video-modal" class="modal-overlay">
+        <div class="modal-content video-modal-content">
+            <div class="modal-header">
+                <h3>Navigation Video</h3>
+                <span id="video-modal-close" class="modal-close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <video id="navigation-video" width="100%" controls preload="auto">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Original Modal (kept but not enabled in js) -->
+    <div id="error-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header"><h3>Notice</h3><span id="modal-close" class="modal-close-btn">&times;</span></div>
+            <div class="modal-body"><p id="error-message"></p></div>
+            <div class="modal-footer"><button id="modal-ok-btn" class="btn">OK</button></div>
+        </div>
+    </div>
+    <div id="segmentation-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header"><h3>Segmentation Result</h3><span id="segmentation-modal-close" class="modal-close-btn">&times;</span></div>
+            <div class="modal-body">
+                <table id="segmentation-result-table" class="info-table">
+                    <tr><td>Target Name</td><td id="seg-target-name">Unidentified</td></tr>
+                    <tr><td>Segmented Points</td><td id="seg-point-count">0</td></tr>
+                    <tr><td>Total Points</td><td id="seg-total-points">0</td></tr>
+                    <tr><td>Ratio</td><td id="seg-point-ratio">0%</td></tr>
+                    <tr><td>X Axis Range</td><td id="seg-x-range">0 ~ 0</td></tr>
+                    <tr><td>Y Axis Range</td><td id="seg-y-range">0 ~ 0</td></tr>
+                    <tr><td>Z Axis Range</td><td id="seg-z-range">0 ~ 0</td></tr>
+                </table>
+            </div>
+            <div class="modal-footer"><button id="segmentation-modal-ok" class="btn">OK</button></div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/PLYLoader.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
