@@ -9,7 +9,7 @@
 [Jiangming Shi](xxx), [Chaoyang Li](), [Luosong Guo]()
 </div>
 
-![demo show](./assets/demo.gif)
+![demo_show](./assets/demo.gif)
 
 ## 📖 Overview
 
@@ -55,11 +55,11 @@ We provide several pretrained models hosted on Hugging Face. Performance metrics
 We have built an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc1.cloud.lanyun.net:10000/)** where you can upload point clouds and referring expressions to see 3D-ATRES in action!
 
 #### Example1
-![demo show](./assets/example1.gif)
+![example1](./assets/example1.gif)
 #### Example2
-![demo show](./assets/example2.gif)
+![example2](./assets/example2.gif)
 #### Example3
-![demo show](./assets/example3.gif)
+![example3](./assets/example3.gif)
 
 ## 🚀 Getting Started
 
