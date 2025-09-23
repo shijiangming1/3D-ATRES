@@ -102,7 +102,6 @@ We provide an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc
 
 We welcome contributions from the community! Areas of interest include:
 
-- 🎯 New benchmark evaluations
 - 🔧 Performance optimizations  
 - 📚 Additional documentation and tutorials
 - 🌍 Multi-language support
@@ -116,11 +115,8 @@ If you use 3D-ATRES in your research or find our work helpful, please cite our p
 ```bibtex
 @inproceedings{shi20253datres,
   title = {3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation},
-  author = {Shi, Jiangming and Li, Chaoyang and Guo, Luosong},
-  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  author = {Shi, Jiangming and Li, Chaoyang and Guo, Luosong and Gong,Jingyu and Zhang，Zhizhong and Xie， Yuan and Qu， Yanyun},
+  booktitle = {},
   year = {2025},
-  volume = {39},
-  number = {12},
-  pages = {12345--12353},
   publisher = {xxxx}
 }
