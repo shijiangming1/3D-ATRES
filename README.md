@@ -76,17 +76,18 @@ We provide an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc
 
 ### Demo Examples
 
-<div align="center">
-
 #### Example 1: Complex Spatial Relationships
-![example1](./assets/example1.gif)
+<div align="center">
+    <img src="./assets/example1.gif" alt="Example 1" width="600">
+</div>
 
 #### Example 2: Ambiguous Object Descriptions  
-![example2](./assets/example2.gif)
-
+<div align="center">
+    <img src="./assets/example2.gif" alt="Example 2" width="600">
+</div>
 #### Example 3: Multi-Object Scenarios
-![example3](./assets/example3.gif)
-
+<div align="center">
+    <img src="./assets/example3.gif" alt="Example 3" width="600">
 </div>
 
 ## 🗓️ Release Timeline
