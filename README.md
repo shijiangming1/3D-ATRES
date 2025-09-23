@@ -1,11 +1,6 @@
 <div align="center">
 <h1>3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation</h1>
 
-<a href=""><img src="https://img.shields.io/badge/arXiv-25xx.xx001-b31b1b" alt="arXiv"></a>
-<a href=''><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Processed_Data-blue'></a>
-<a href="" target="_blank"><img src="https://img.shields.io/badge/Checkpoint-Orange" alt="checkpoint"></a>
-<a href="http://521661fbe9494e65b3805ad5028c5cc1.cloud.lanyun.net:10000/" target="_blank"><img src="https://img.shields.io/badge/🌐-Live_Demo-green" alt="Live Demo"></a>
-
 [Jiangming Shi](xxx), [Chaoyang Li](), [Luosong Guo]()
 </div>
 
@@ -40,20 +35,19 @@ We will show the model architecture when the paper is released.
 
 We provide several pretrained models hosted on Hugging Face. Performance metrics are summarized below:
 
-### 📈 ScanRefer Dataset
-
-| **Pretrained Model** | **Precision@0.5** | **Precision@0.7** | **mIoU** |
-|:--------------------:|:-----------------:|:-----------------:|:--------:|
-| 3D-ATRES (Base)      |       xxx      |       xxx       |   xxx  |
-| 3D-ATRES (Large)     |     **xxx**     |     **xxx**     | **xxx**|
-| 3D-ATRES (Ensemble)  |       xxx       |      xxx       |   xxx  |
-
-### 📉 Multi3DRefer Dataset
-
-| **Pretrained Model** | **Overall Acc.** | **Mean Acc.** | **Frequency-weighted IoU** |
-|:--------------------:|:----------------:|:-------------:|:--------------------------:|
-| 3D-ATRES (Base)      |       xxx       |      xxx     |            xxx            |
-| 3D-ATRES (Large)     |     **xxx**     |    **xxx**   |          **xxx**          |
+| Method | Venue | Base LLM | ScanRefer Acc@0.25 | ScanRefer Acc@0.5 | Multi3DRefer F1@0.25 | Multi3DRefer F1@0.5 |
+|--------|-------|----------|-------------------|-------------------|----------------------|---------------------|
+| **Specialist Models** | | | | | | |
+| **LLM-based Models** | | | | | | |
+| 3D-LLM| NeurIPS'23 | BLIP2-flant5 | 30.3 | - | - | - |
+| PQ3D | ECCV'24 | Vicuna-7B | 57.0 | 51.2 | - | - |
+| ReGround3D  | ECCV'24 | BLIP2-flant5 | 53.1 | 41.1 | - | - |
+| Chat-Scene  | NeurIPS'24 | Vicuna-7B | 55.5 | 50.2 | 57.1 | 52.4 |
+| LIBA  | AAAI'25 | - | 59.6 | 49.0 | - | 50.2 |
+| Inst3D-LMM  | CVPR'25 | Vicuna1.5-7B | 57.8 | 51.6 | 58.3 | 53.5 |
+| Video-3D LLM  | CVPR'25 | LLaVA-Video 7B | 58.1 | **51.7** | 58.0 | 52.7 |
+| 3D-LLaVA  | CVPR'25 | LLaVA-1.5-7B | 62.8 | 45.3 | 68.7 | 49.2 |
+| **3D-ATRES (Ours)** | - | LLaVA-1.5-7B | **65.3** | 50.7 | **72.7** | **55.7** |
 
 > 🔍 *More detailed results and analyses can be found in our paper.*
 
