@@ -1,82 +1,111 @@
 <div align="center">
-<h1>3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation</h1>
+
+# 🎯 3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation
+
 
 [Jiangming Shi](xxx), [Chaoyang Li](), [Luosong Guo]()
+
 </div>
 
 <div align="center">
-  <img src="./assets/demo.gif" alt="Demo GIF" width="800">
+  <img src="./assets/demo.gif" alt="3D-ATRES Demo" width="800">
+  <p><em>3D-ATRES accurately segments target objects from ambiguous natural language descriptions</em></p>
 </div>
 
-## 📖 Overview
+## 🔍 Introduction
+
+**3D-ATRES** is a groundbreaking framework that tackles one of the most challenging problems in 3D vision-language understanding: **3D Referring Expression Segmentation (3D-RES)**. Unlike existing methods that struggle with real-world ambiguities, our approach specifically addresses multi-source uncertainties through innovative ambiguity-tolerant learning mechanisms.
 
 <div style="text-align: center;">
     <img src="assets/introductionv3.png" alt="Method Overview" width="100%">
 </div>
 
-**3D-ATRES** (3D Ambiguity-Tolerant Referring Expression Segmentation) is a novel framework designed to address the challenging task of **3D Referring Expression Segmentation (3D-RES)**. It enables precise segmentation of a target object within a 3D point cloud from a natural language description, with a dedicated focus on identifying and resolving **multi-source ambiguities** commonly encountered in real-world scenarios.
+### 🎯 What Problem Do We Solve?
 
-## 🚀  Release Plan
-- [x] Release the visual interaction tools code.
-- [ ] Release the training code.
+Real-world 3D referring expressions often suffer from three types of ambiguity:
+- **Prompt Ambiguity**: Vague or underspecified language descriptions
+- **Spatial Ambiguity**: Viewpoint-dependent spatial relationships  
+- **Annotation Ambiguity**: Inconsistent or noisy training labels
 
+3D-ATRES provides the first comprehensive solution to simultaneously handle all these challenges.
 
-### ✨ Key Features
-- **🔄 TR² Semantic Structurizer**: Parses free-form language into structured **Target–Relation–Referent** triples to eliminate **prompt ambiguity**
-- **🧭 Normal-Aware Spatial Alignment**: Uses surface normal cues for robust, **viewpoint-invariant** geometric reasoning, addressing **spatial ambiguity**
-- **📊 Annotation Ambiguity Penalty**: Employs a probabilistic learning mechanism to handle **noisy or inconsistent annotations** during training
-- **✅ State-of-the-Art Performance**: Achieves leading results on benchmark datasets **ScanRefer** and **Multi3DRefer**
+## ✨ Key Innovations
 
-## 🧠 Model Architecture
+<div align="center">
 
-We will show the model architecture when the paper is released.
+| Feature | Innovation | Impact |
+|---------|------------|--------|
+| **🔄 TR² Semantic Structurizer** | Transforms free-form language into structured Target–Relation–Referent triples | Eliminates **prompt ambiguity** through semantic disambiguation |
+| **🧭 Normal-Aware Spatial Alignment** | Incorporates surface normal cues for geometric reasoning | Ensures **viewpoint-invariant** spatial understanding |
+| **📊 Annotation Ambiguity Penalty** | Probabilistic learning with ambiguity-aware loss functions | Robust to **inconsistent annotations** during training |
 
-## 📊 Pretrained Models
+</div>
 
-We provide several pretrained models hosted on Hugging Face. Performance metrics are summarized below:
+## 🏆 Performance Highlights
+
+### State-of-the-Art Results on Major Benchmarks
+
+<div align="center">
 
 | Method | Venue | Base LLM | ScanRefer Acc@0.25 | ScanRefer Acc@0.5 | Multi3DRefer F1@0.25 | Multi3DRefer F1@0.5 |
 |--------|-------|----------|-------------------|-------------------|----------------------|---------------------|
-| **Specialist Models** | | | | | | |
-| **LLM-based Models** | | | | | | |
-| 3D-LLM| NeurIPS'23 | BLIP2-flant5 | 30.3 | - | - | - |
+| 3D-LLM | NeurIPS'23 | BLIP2-flant5 | 30.3 | - | - | - |
 | PQ3D | ECCV'24 | Vicuna-7B | 57.0 | 51.2 | - | - |
-| ReGround3D  | ECCV'24 | BLIP2-flant5 | 53.1 | 41.1 | - | - |
-| Chat-Scene  | NeurIPS'24 | Vicuna-7B | 55.5 | 50.2 | 57.1 | 52.4 |
-| LIBA  | AAAI'25 | - | 59.6 | 49.0 | - | 50.2 |
-| Inst3D-LMM  | CVPR'25 | Vicuna1.5-7B | 57.8 | 51.6 | 58.3 | 53.5 |
-| Video-3D LLM  | CVPR'25 | LLaVA-Video 7B | 58.1 | **51.7** | 58.0 | 52.7 |
-| 3D-LLaVA  | CVPR'25 | LLaVA-1.5-7B | 62.8 | 45.3 | 68.7 | 49.2 |
+| ReGround3D | ECCV'24 | BLIP2-flant5 | 53.1 | 41.1 | - | - |
+| Chat-Scene | NeurIPS'24 | Vicuna-7B | 55.5 | 50.2 | 57.1 | 52.4 |
+| LIBA | AAAI'25 | - | 59.6 | 49.0 | - | 50.2 |
+| Inst3D-LMM | CVPR'25 | Vicuna1.5-7B | 57.8 | 51.6 | 58.3 | 53.5 |
+| Video-3D LLM | CVPR'25 | LLaVA-Video 7B | 58.1 | **51.7** | 58.0 | 52.7 |
+| 3D-LLaVA | CVPR'25 | LLaVA-1.5-7B | 62.8 | 45.3 | 68.7 | 49.2 |
 | **3D-ATRES (Ours)** | - | LLaVA-1.5-7B | **65.3** | 50.7 | **72.7** | **55.7** |
 
-> 🔍 *More detailed results and analyses can be found in our paper.*
+</div>
+
+> 💡 **Key Insight**: Our method achieves particularly significant gains in challenging scenarios with complex spatial relationships and ambiguous descriptions, demonstrating superior ambiguity tolerance.
 
 ## 🌐 Live Demo
 
-We have built an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc1.cloud.lanyun.net:10000/)** where you can upload point clouds and referring expressions to see 3D-ATRES in action! In addition, we have open-source the code for all visual interaction tools. You can find all the relevant code in the **web2.4_EN/**
+### Experience 3D-ATRES in Action
 
-#### Example1
+We provide an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc1.cloud.lanyun.net:10000/)** where you can:
+
+- 📤 Upload your own point clouds
+- 💬 Test with custom referring expressions  
+- 👁️ View real-time segmentation results
+- 📊 Compare with baseline methods
+
+### Demo Examples
+
+<div align="center">
+
+#### Example 1: Complex Spatial Relationships
 ![example1](./assets/example1.gif)
-#### Example2
+
+#### Example 2: Ambiguous Object Descriptions  
 ![example2](./assets/example2.gif)
-#### Example3
+
+#### Example 3: Multi-Object Scenarios
 ![example3](./assets/example3.gif)
 
-## 🚀 Getting Started
+</div>
 
-We will show the started steps when the code is released.
+## 🗓️ Release Timeline
 
-## 🙏 Acknowledgements
+- [x] **Sept 2025**: Visualization tools released (`web2.4_EN/`)
+- [ ] **Paper Received**: Training code and pretrained models
+- [ ] **Paper Received**: Full documentation and tutorials
+- [ ] **Paper Received**: Extended benchmarks and applications
 
-We extend our sincere gratitude to the following open-source projects and their contributors, which have been instrumental in our research:
+## 🤝 Contributing
 
-- [ReferIt3D](https://github.com/referit3d/referit3d) - For the foundational 3D referring expression benchmark
-- [ScanRefer](https://github.com/daveredrum/ScanRefer) - For the ScanRefer dataset and baseline implementations  
-- [Multi3DRefer](https://github.com/xxzhou/Multi3DRefer) - For the multi-view 3D referring expression dataset
-- [Open3D](http://www.open3d.org/) - For the powerful 3D data processing tools
-- [Hugging Face](https://huggingface.co/) - For providing the platform to share our models and datasets
+We welcome contributions from the community! Areas of interest include:
 
-We also thank the researchers and developers in the 3D vision and language community for their valuable insights and contributions.
+- 🎯 New benchmark evaluations
+- 🔧 Performance optimizations  
+- 📚 Additional documentation and tutorials
+- 🌍 Multi-language support
+
+*Contributing guidelines will be released with the code.*
 
 ## 📜 Citation
 
