@@ -85,6 +85,7 @@ We provide an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc
 <div align="center">
     <img src="./assets/example2.gif" alt="Example 2" width="600">
 </div>
+
 #### Example 3: Multi-Object Scenarios
 <div align="center">
     <img src="./assets/example3.gif" alt="Example 3" width="600">
