@@ -11,7 +11,7 @@
 ## 📖 Overview
 
 <div style="text-align: center;">
-    <img src="assets/IntroctionV3.pdf" alt="Method Overview" width="100%">
+    <img src="assets/introductionv3.png" alt="Method Overview" width="100%">
 </div>
 
 **3D-ATRES** (3D Ambiguity-Tolerant Referring Expression Segmentation) is a novel framework designed to address the challenging task of **3D Referring Expression Segmentation (3D-RES)**. It enables precise segmentation of a target object within a 3D point cloud from a natural language description, with a dedicated focus on identifying and resolving **multi-source ambiguities** commonly encountered in real-world scenarios.
