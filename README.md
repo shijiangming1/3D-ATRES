@@ -3,7 +3,7 @@
 # 🎯 3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation
 
 
-[Jiangming Shi](xxx), [Chaoyang Li](), [Luosong Guo]()
+[Jiangming Shi](xxx), [Chaoyang Li](), [Luosong Guo](), [JIngyu Gong](), [Yuan Xie](), [Yanyun Qu]()
 
 </div>
 
@@ -94,9 +94,9 @@ We provide an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc
 ## 🗓️ Release Timeline
 
 - [x] **Sept 2025**: Visualization tools released (`web2.4_EN/`)
-- [ ] **Paper Received**: Training code and pretrained models
-- [ ] **Paper Received**: Full documentation and tutorials
-- [ ] **Paper Received**: Extended benchmarks and applications
+- [ ] **Paper Accetped**: Training code and pretrained models
+- [ ] **Paper Accetped**: Full documentation and tutorials
+- [ ] **Paper Accetped**: Extended benchmarks and applications
 
 ## 🤝 Contributing
 
