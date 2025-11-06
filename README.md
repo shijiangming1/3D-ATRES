@@ -2,13 +2,13 @@
 
 # 🎯 3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation
 
-[Jiangming Shi](xxx)<sup>1,2</sup>, [Chaoyang Li]()<sup>2</sup>, [Luosong Guo]()<sup>2</sup>, [Jingyu Gong]()<sup>2</sup>, [Yuan Xie](xxx)<sup>2</sup>, [Yanyun Qu](xxx)<sup>2</sup>
+[Jiangming Shi](xxx)<sup>1,2</sup>, [Chaoyang Li]()<sup>1</sup>, [Luosong Guo]()<sup>1</sup>, [Jingyu Gong]()<sup>3</sup>, [Yuan Xie](xxx)<sup>2, 3</sup>, [Yanyun Qu](xxx)<sup>2</sup>
 
 </div>
 
 <div align="center">
 
-<sup>1</sup>Shanghai Chuangzhi College, Shanghai, China  
+<sup>1</sup>Shanghai Innovation Institute, Shanghai, China  
 <sup>2</sup>Xiamen University, Xiamen, China  
 <sup>3</sup>East China Normal University, Shanghai, China  
 
