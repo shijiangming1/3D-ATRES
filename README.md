@@ -2,8 +2,15 @@
 
 # 🎯 3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation
 
+[Jiangming Shi](xxx)<sup>1,2</sup>, [Chaoyang Li]()<sup>2</sup>, [Luosong Guo]()<sup>2</sup>, [Jingyu Gong]()<sup>2</sup>, [Yuan Xie](xxx)<sup>2</sup>, [Yanyun Qu](xxx)<sup>2</sup>
 
-[Jiangming Shi](xxx), [Chaoyang Li](), [Luosong Guo](), [JIngyu Gong](), [Yuan Xie](), [Yanyun Qu]()
+</div>
+
+<div align="center">
+
+<sup>1</sup>Shanghai Chuangzhi College, Shanghai, China  
+<sup>2</sup>Xiamen University, Xiamen, China  
+<sup>3</sup>East China Normal University, Shanghai, China  
 
 </div>
 
@@ -12,9 +19,12 @@
   <p><em>3D-ATRES accurately segments target objects from ambiguous natural language descriptions</em></p>
 </div>
 
+---
+
 ## 🔍 Introduction
 
-**3D-ATRES** is a groundbreaking framework that tackles one of the most challenging problems in 3D vision-language understanding: **3D Referring Expression Segmentation (3D-RES)**. Unlike existing methods that struggle with real-world ambiguities, our approach specifically addresses multi-source uncertainties through innovative ambiguity-tolerant learning mechanisms.
+**3D-ATRES** is a groundbreaking framework that tackles one of the most challenging problems in 3D vision-language understanding: **3D Referring Expression Segmentation (3D-RES)**.  
+Unlike existing methods that struggle with real-world ambiguities, our approach specifically addresses **multi-source uncertainties** through innovative **ambiguity-tolerant learning mechanisms**.
 
 <div style="text-align: center;">
     <img src="assets/introductionv3.png" alt="Method Overview" width="100%">
@@ -23,11 +33,13 @@
 ### 🎯 What Problem Do We Solve?
 
 Real-world 3D referring expressions often suffer from three types of ambiguity:
-- **Prompt Ambiguity**: Vague or underspecified language descriptions
+- **Prompt Ambiguity**: Vague or underspecified language descriptions  
 - **Spatial Ambiguity**: Viewpoint-dependent spatial relationships  
-- **Annotation Ambiguity**: Inconsistent or noisy training labels
+- **Annotation Ambiguity**: Inconsistent or noisy training labels  
 
 3D-ATRES provides the first comprehensive solution to simultaneously handle all these challenges.
+
+---
 
 ## ✨ Key Innovations
 
@@ -40,6 +52,8 @@ Real-world 3D referring expressions often suffer from three types of ambiguity:
 | **📊 Annotation Ambiguity Penalty** | Probabilistic learning with ambiguity-aware loss functions | Robust to **inconsistent annotations** during training |
 
 </div>
+
+---
 
 ## 🏆 Performance Highlights
 
@@ -63,16 +77,18 @@ Real-world 3D referring expressions often suffer from three types of ambiguity:
 
 > 💡 **Key Insight**: Our method achieves particularly significant gains in challenging scenarios with complex spatial relationships and ambiguous descriptions, demonstrating superior ambiguity tolerance.
 
+---
+
 ## 🌐 Live Demo
 
 ### Experience 3D-ATRES in Action
 
 We provide an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc1.cloud.lanyun.net:10000/)** where you can:
 
-- 📤 Upload your own point clouds
+- 📤 Upload your own point clouds  
 - 💬 Test with custom referring expressions  
-- 👁️ View real-time segmentation results
-- 📊 Compare with baseline methods
+- 👁️ View real-time segmentation results  
+- 📊 Compare with baseline methods  
 
 ### Demo Examples
 
@@ -91,22 +107,28 @@ We provide an **[interactive online demo](http://521661fbe9494e65b3805ad5028c5cc
     <img src="./assets/example3.gif" alt="Example 3" width="600">
 </div>
 
+---
+
 ## 🗓️ Release Timeline
 
-- [x] **Sept 2025**: Visualization tools released (`web2.4_EN/`)
-- [ ] **Paper Accetped**: Training code and pretrained models
-- [ ] **Paper Accetped**: Full documentation and tutorials
-- [ ] **Paper Accetped**: Extended benchmarks and applications
+- [x] **Sept 2025**: Visualization tools released (`web2.4_EN/`)  
+- [ ] **Paper Accepted**: Training code and pretrained models  
+- [ ] **Paper Accepted**: Full documentation and tutorials  
+- [ ] **Paper Accepted**: Extended benchmarks and applications  
+
+---
 
 ## 🤝 Contributing
 
 We welcome contributions from the community! Areas of interest include:
 
 - 🔧 Performance optimizations  
-- 📚 Additional documentation and tutorials
-- 🌍 Multi-language support
+- 📚 Additional documentation and tutorials  
+- 🌍 Multi-language support  
 
 *Contributing guidelines will be released with the code.*
+
+---
 
 ## 📜 Citation
 
@@ -115,8 +137,18 @@ If you use 3D-ATRES in your research or find our work helpful, please cite our p
 ```bibtex
 @inproceedings{shi20253datres,
   title = {3D-ATRES: Ambiguity-Tolerant Learning for 3D Referring Expression Segmentation},
-  author = {Shi, Jiangming and Li, Chaoyang and Guo, Luosong and Gong,Jingyu and Zhang，Zhizhong and Xie， Yuan and Qu， Yanyun},
+  author = {Shi, Jiangming and Li, Chaoyang and Guo, Luosong and Gong, Jingyu and Zhang, Zhizhong and Xie, Yuan and Qu, Yanyun},
   booktitle = {},
   year = {2025},
   publisher = {xxxx}
 }
+```
+
+---
+
+<div align="center">
+
+📧 **Contact:** jiangming.shi@outlook.com | xiangboyin@stu.xmu.edu.cn  
+⭐ If you find this project useful, please give it a star!
+
+</div>
